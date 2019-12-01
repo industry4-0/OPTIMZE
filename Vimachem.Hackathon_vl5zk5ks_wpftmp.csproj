@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3364739B-9481-463A-8674-D1EDDCE32B2D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Vimachem.Hackathon</RootNamespace>
+    <AssemblyName>Vimachem.Hackathon</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DynamicCharts.cs" />
+    <Compile Include="MachineParameter.cs" />
+    <Compile Include="RecipeManager.cs" />
+    <Compile Include="RecipeParameter.cs" />
+    <Compile Include="Views\Tabs\Calibration.xaml.cs">
+      <DependentUpon>Calibration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tabs\History.xaml.cs">
+      <DependentUpon>History.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tabs\MainTab.xaml.cs">
+      <DependentUpon>MainTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tabs\RecipeSettingsTab.xaml.cs">
+      <DependentUpon>RecipeSettingsTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tabs\Schematics.xaml.cs">
+      <DependentUpon>Schematics.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Photos\vimachem-logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ReferencePath Include="C:\Users\VasilisMerevis\Vimachem\Products and R&amp;D - Έγγραφα\Hackathon\Vimachem.Hackathon\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll" />
+    <ReferencePath Include="C:\Users\VasilisMerevis\Vimachem\Products and R&amp;D - Έγγραφα\Hackathon\Vimachem.Hackathon\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Microsoft.CSharp.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\mscorlib.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\PresentationCore.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\PresentationFramework.dll" />
+    <ReferencePath Include="C:\Users\VasilisMerevis\Vimachem\Products and R&amp;D - Έγγραφα\Hackathon\Vimachem.Hackathon\packages\Prism.Core.7.2.0.1367\lib\net45\Prism.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Core.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Data.DataSetExtensions.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Data.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Net.Http.dll" />
+    <ReferencePath Include="C:\Users\VasilisMerevis\Vimachem\Products and R&amp;D - Έγγραφα\Hackathon\Vimachem.Hackathon\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Xaml.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Xml.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Xml.Linq.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\WindowsBase.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="C:\Users\VasilisMerevis\Vimachem\Products and R&amp;D - Έγγραφα\Hackathon\Vimachem.Hackathon\obj\Debug\Views\Tabs\Calibration.g.cs" />
+    <Compile Include="C:\Users\VasilisMerevis\Vimachem\Products and R&amp;D - Έγγραφα\Hackathon\Vimachem.Hackathon\obj\Debug\Views\Tabs\History.g.cs" />
+    <Compile Include="C:\Users\VasilisMerevis\Vimachem\Products and R&amp;D - Έγγραφα\Hackathon\Vimachem.Hackathon\obj\Debug\Views\Tabs\MainTab.g.cs" />
+    <Compile Include="C:\Users\VasilisMerevis\Vimachem\Products and R&amp;D - Έγγραφα\Hackathon\Vimachem.Hackathon\obj\Debug\Views\MainWindow.g.cs" />
+    <Compile Include="C:\Users\VasilisMerevis\Vimachem\Products and R&amp;D - Έγγραφα\Hackathon\Vimachem.Hackathon\obj\Debug\Views\Tabs\RecipeSettingsTab.g.cs" />
+    <Compile Include="C:\Users\VasilisMerevis\Vimachem\Products and R&amp;D - Έγγραφα\Hackathon\Vimachem.Hackathon\obj\Debug\Views\Tabs\Schematics.g.cs" />
+    <Compile Include="C:\Users\VasilisMerevis\Vimachem\Products and R&amp;D - Έγγραφα\Hackathon\Vimachem.Hackathon\obj\Debug\Views\LoginWindow.g.cs" />
+    <Compile Include="C:\Users\VasilisMerevis\Vimachem\Products and R&amp;D - Έγγραφα\Hackathon\Vimachem.Hackathon\obj\Debug\App.g.cs" />
+    <Compile Include="C:\Users\VasilisMerevis\Vimachem\Products and R&amp;D - Έγγραφα\Hackathon\Vimachem.Hackathon\obj\Debug\Vimachem.Hackathon_Content.g.cs" />
+    <Compile Include="C:\Users\VasilisMerevis\Vimachem\Products and R&amp;D - Έγγραφα\Hackathon\Vimachem.Hackathon\obj\Debug\GeneratedInternalTypeHelper.g.cs" />
+  </ItemGroup>
+</Project>

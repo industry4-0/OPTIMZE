@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Vimachem.Hackathon.SensorControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Vimachem.Hackathon"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" Background="#FFB7B7B7"
+             mc:Ignorable="d" Height="250.071" Width="358.886">
+    <Grid >
+            <Label x:Name="lbTitle" Content="Inspection Monitor" Margin="10,10,10,0" FontSize="22" Height="41" Foreground="#FFDADADA" Background="#FF356687" VerticalAlignment="Top"/>
+        <lvc:Gauge x:Name="chartGauge" LabelsVisibility="Collapsed"  Margin="10,56,10,10">
+                <lvc:Gauge.GaugeActiveFill>
+                    <LinearGradientBrush>
+                        <GradientStop Color="Yellow" Offset="0.0" />
+                        <GradientStop Color="Orange" Offset="0.5" />
+                        <GradientStop Color="Red" Offset="1.0" />
+                    </LinearGradientBrush>
+                </lvc:Gauge.GaugeActiveFill>
+            </lvc:Gauge>
+
+    
+    </Grid>
+</UserControl>

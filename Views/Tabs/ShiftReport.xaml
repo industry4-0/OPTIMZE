@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="Vimachem.Hackathon.Views.Tabs.ShiftReportTab"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Vimachem.Hackathon.Views.Tabs"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*"></RowDefinition>
+            <RowDefinition Height="1.5*"></RowDefinition>
+            <RowDefinition Height="6*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+          
+        <Label Grid.Row="0" Grid.Column="0" Content="Arrival Time" Style="{StaticResource LabelStyle}"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Text="" Style="{StaticResource TextStyle}"/>
+        
+        <Label Grid.Row="0" Grid.Column="2" Content="Take over time"  Style="{StaticResource LabelStyle}"/>
+        <TextBox Grid.Row="0" Grid.Column="3" Text=""  Style="{StaticResource TextStyle}"/>
+        <Label Grid.Row="1" Grid.Column="0" Content="Comments:"  Style="{StaticResource LabelStyle}"/>
+
+        <TextBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="5" Text=""  Style="{StaticResource TextStyle}"/>
+
+        <Button Grid.Row="3" Grid.Column="0" Style="{StaticResource ButtonStyle}" Content="Submit"></Button>
+        <Button Grid.Row="3" Grid.Column="5" Style="{StaticResource ButtonStyle}" Content="Nymi Compatible"></Button>
+    </Grid>
+</UserControl>
